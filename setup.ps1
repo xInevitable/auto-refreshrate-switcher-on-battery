@@ -55,7 +55,9 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
     Unregister-ScheduledTask -TaskName $taskName -Confirm:$false -ErrorAction SilentlyContinue
 }
 $xmlText = Get-Content -Path $taskXml -Raw
-Register-ScheduledTask -Xml $xmlText -TaskName $taskName -Force
+$TaskUser = "$env:UserDomain\$env:UserName"
+Register-ScheduledTask -Xml $xmlText -TaskName $taskName -User $TaskUser -Force
+
 
 # 6. Clean up temp files
 Write-Host "Cleaning up temporary files..."

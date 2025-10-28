@@ -61,7 +61,10 @@ Register-ScheduledTask -Xml $xmlText -TaskName $taskName -Force
 Write-Host "Cleaning up temporary files..."
 Remove-Item $tempZip -Force -ErrorAction SilentlyContinue
 Remove-Item $tempExtract -Recurse -Force -ErrorAction SilentlyContinue
-
+$InstalledScript = "C:\Program Files\QRes\setup.ps1"
+if (Test-Path $InstalledScript) {
+    Remove-Item $InstalledScript -Force
+}
 Write-Host ""
 Write-Host "✅ Setup complete!"
 Write-Host "Files installed at: $installPath"

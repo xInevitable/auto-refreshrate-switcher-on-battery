@@ -14,9 +14,10 @@
       <Enabled>true</Enabled>
       <Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="System"&gt;&lt;Select Path="System"&gt;*[System[Provider[@Name='Microsoft-Windows-Kernel-Power'] and EventID=104]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</Subscription>
     </EventTrigger>
-    <LogonTrigger>
+    <EventTrigger>
       <Enabled>true</Enabled>
-    </LogonTrigger>
+      <Subscription>&lt;QueryList&gt;&lt;Query Id="0" Path="Microsoft-Windows-Winlogon/Operational"&gt;&lt;Select Path="Microsoft-Windows-Winlogon/Operational"&gt;*[System[Provider[@Name='Microsoft-Windows-Winlogon']]]&lt;/Select&gt;&lt;/Query&gt;&lt;/QueryList&gt;</Subscription>
+    </EventTrigger>
   </Triggers>
   <Principals>
     <Principal id="Author">
@@ -42,7 +43,7 @@
     <DisallowStartOnRemoteAppSession>false</DisallowStartOnRemoteAppSession>
     <UseUnifiedSchedulingEngine>true</UseUnifiedSchedulingEngine>
     <WakeToRun>false</WakeToRun>
-    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+    <ExecutionTimeLimit>PT1H</ExecutionTimeLimit>
     <Priority>7</Priority>
   </Settings>
   <Actions Context="Author">

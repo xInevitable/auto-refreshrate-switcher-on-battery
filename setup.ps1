@@ -65,10 +65,6 @@ $InstalledScript = "C:\Program Files\QRes\setup.ps1"
 if (Test-Path $InstalledScript) {
     Remove-Item $InstalledScript -Force
 }
-$InstalledScript2 = "C:\Program Files\QRes\.gitignore"
-if (Test-Path $InstalledScript2) {
-    Remove-Item $InstalledScript2 -Force }
-
 Write-Host ""
 Write-Host "✅ Setup complete!"
 Write-Host "Files installed at: $installPath"

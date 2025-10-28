@@ -1,0 +1,8 @@
+# Ignore local or temporary files
+*.zip
+*.log
+*.tmp
+
+# Ignore backup or private scripts
+setup_no_policy.ps1
+setup.ps1

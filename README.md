@@ -1,0 +1,1 @@
+# auto-refreshrate-switcher-on-battery

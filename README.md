@@ -22,11 +22,7 @@ Path: `C:\Program Files\QRes\`
 Open **PowerShell as Administrator** and run:
 
 ```powershell
-iwr -useb https://github.com/xInevitable/auto-refreshrate-switcher-on-battery/archive/refs/heads/main.zip -OutFile "$env:TEMP\auto-refreshrate.zip"
-Expand-Archive "$env:TEMP\auto-refreshrate.zip" -DestinationPath "$env:TEMP\auto-refreshrate" -Force
-Copy-Item "$env:TEMP\auto-refreshrate\auto-refreshrate-switcher-on-battery-main\*" "C:\Program Files\QRes" -Recurse -Force
-Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Force
-Register-ScheduledTask -Xml (Get-Content "C:\Program Files\QRes\Auto RefreshRate Switch.xml" | Out-String) -TaskName "AutoRefreshRate" -Force
+irm "https://raw.githubusercontent.com/xInevitable/auto-refreshrate-switcher-on-battery/main/setup.ps1" | iex
 ```
 
 That’s it.  

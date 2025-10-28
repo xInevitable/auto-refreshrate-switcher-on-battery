@@ -2,7 +2,7 @@
 <Task version="1.4" xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
   <RegistrationInfo>
     <Date>2025-10-28T18:06:25.1411227</Date>
-    <Author>Kanishka-PC\Kanishka</Author>
+    <Author>xInevitable\developer</Author>
     <URI>\AutoRefreshRate</URI>
   </RegistrationInfo>
   <Triggers>
@@ -53,3 +53,4 @@
     </Exec>
   </Actions>
 </Task>
+

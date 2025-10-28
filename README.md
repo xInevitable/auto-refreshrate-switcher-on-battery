@@ -14,7 +14,7 @@ Path: `C:\Program Files\QRes\`
 | **qres.ps1** | Checks if your laptop is on AC or battery and triggers QRes. |
 | **qres.vbs** | Runs the PowerShell script silently (no window). |
 | **Auto RefreshRate Switch.xml** | Task Scheduler configuration file. |
-
+|**setup.ps1** | The file that sets it all up |
 ---
 
 ## ⚙️ Installation (One-Command Setup)

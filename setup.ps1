@@ -55,6 +55,7 @@ try {
 
     $xmlText = Get-Content -Path $taskXml -Raw
     $TaskUser = "$env:UserDomain\$env:UserName"
+    $xmlText = $xmlText -replace '\{\{ProgramFilesPath\}\}', $ProgramFilesPath
     Register-ScheduledTask -Xml $xmlText -TaskName $taskName -User $TaskUser -Force
     Start-Sleep -Seconds 1
 

@@ -43,8 +43,8 @@ Write-Host "Copying files to $installPath ..."
 Copy-Item -Path "$repoMain\*" -Destination $installPath -Recurse -Force
 
 # 5. Import Task Scheduler XML
-$taskName = "AutoRefreshRate"
-$taskXml = Join-Path $installPath "Auto RefreshRate Switch.xml"
+$taskName = "AutoRefreshRateSwitcher"
+$taskXml = Join-Path $installPath "taskschd.xml"
 if (-not (Test-Path $taskXml)) {
     Write-Error "Task XML not found at $taskXml. Aborting."
     exit 1

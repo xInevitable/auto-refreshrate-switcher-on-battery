@@ -3,7 +3,8 @@
   <RegistrationInfo>
     <Date>2025-10-28T18:06:25.1411227</Date>
     <Author>xInevitable\developer</Author>
-    <URI>\AutoRefreshRate</URI>
+    <Description>Automatically switches display refresh rate when power state changes or at logon.</Description>
+    <URI>\DynamicRefresh</URI>
   </RegistrationInfo>
   <Triggers>
     <EventTrigger>
@@ -49,7 +50,8 @@
   <Actions Context="Author">
     <Exec>
       <Command>wscript.exe</Command>
-      <Arguments>"C:\Program Files\QRes\qres.vbs"</Arguments>
+      <Arguments>"{{ProgramFilesPath}}\QRes\qres.vbs"</Arguments>
     </Exec>
   </Actions>
 </Task>
+

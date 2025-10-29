@@ -15,7 +15,8 @@
 # Run this script as Administrator.
 
 # 1. Create install folder
-$installPath = "C:\Program Files\QRes"
+$ProgramFilesPath = ${env:ProgramFiles}
+$installPath = "$ProgramFilesPath\QRes"
 Write-Host "Creating folder at $installPath..."
 New-Item -ItemType Directory -Path $installPath -Force | Out-Null
 

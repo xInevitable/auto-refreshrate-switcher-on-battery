@@ -13,8 +13,7 @@ Path: `C:\Program Files\QRes\`
 | **QRes.exe** | The tool that changes display refresh rate. |
 | **qres.ps1** | Checks if your laptop is on AC or battery and triggers QRes. |
 | **qres.vbs** | Runs the PowerShell script silently (no window). |
-| **Auto RefreshRate Switch.xml** | Task Scheduler configuration file. |
-|**setup.ps1** | The file that sets it all up |
+| **taskschd.xml** | Task Scheduler configuration file. |
 ---
 
 ## ⚙️ Installation (One-Command Setup)
@@ -22,7 +21,7 @@ Path: `C:\Program Files\QRes\`
 Open **PowerShell as Administrator** and run:
 
 ```powershell
-irm "https://raw.githubusercontent.com/xInevitable/auto-refreshrate-switcher-on-battery/main/setup.ps1" | iex
+irm "https://raw.githubusercontent.com/xInevitable/dynamic-refresh/main/setup.ps1" | iex
 ```
 
 That’s it.  
